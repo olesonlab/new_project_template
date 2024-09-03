@@ -1,0 +1,8 @@
+---
+title: "[Insert title]"
+author: "[Insert name]"
+toc-title: "Contents"
+date: last-modified
+date-format: long
+format: html
+---

@@ -1,0 +1,85 @@
+---
+title: "[Insert title]"
+author: "[Insert name]"
+toc-title: "Contents"
+date: last-modified
+date-format: long
+format: html
+code-annotations: hover
+code-overflow: wrap
+---
+
+This is a Quarto website. The following is an example of how you can format it.
+
+## Dependencies
+
+```{r}
+#| label: example-code-chunk
+#| code-fold: true
+#| code-summary: Example of a folded code chunk
+source(here::here("functions", "install_packages_and_load_libraries.R")) # <1>
+```
+
+1. Sources in function `install_packages_and_load_libraries()` which uses the
+`pacman` and `renv` packages to keep track of our dependencies
+
+## Data
+
+We will use the `mtcars` data set as an example:
+
+```{r}
+#| label: glimpse-at-mtcars
+#| collapse: true
+glimpse(mtcars)
+```
+
+```{r}
+#| label: summarize-mtcars
+#| collapse: true
+summary(mtcars)
+```
+
+::: {.panel-tabset}
+
+### Table
+
+```{r}
+#| label: mtcars-table
+#| code-fold: true
+#| code-summary: Create a quick table
+gt(head(mtcars)) # <1>
+```
+
+1. Print the first 6 rows of the `mtcars` data set using `head()` function and 
+create a table using the `{gt}` R package
+
+### Plot
+
+```{r}
+#| label: mtcars-plot
+#| code-fold: true
+#| code-summary: Create a quick histogram plot
+#| fig-align: center
+ggplot(mtcars, aes(mpg)) +
+  geom_histogram()
+```
+
+:::
+
+## Additional Section
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+## Additional Section
+
+### Subsection
+
+Lorem ipsum odor amet, consectetuer adipiscing elit. Varius mus vitae euismod vehicula montes natoque turpis. Venenatis nisi primis orci felis cursus sem himenaeos metus hendrerit. Suspendisse himenaeos congue metus a aptent pharetra ligula praesent. In per eget diam tristique sodales adipiscing. Est at nisl faucibus pulvinar per nunc at malesuada! Platea magna suspendisse egestas lacinia faucibus taciti donec id.
+
+### Additional Subsection
+
+Sapien platea vel, faucibus vel rhoncus ligula platea. Ut curae enim ridiculus sapien finibus? Amet ac taciti faucibus congue quisque orci pharetra. Ad nullam tortor dis consectetur interdum penatibus. Tempor justo taciti fames dapibus sodales fusce in class proin. Class inceptos nec enim libero aliquam lobortis tempor erat platea.
+
+## Resources
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.

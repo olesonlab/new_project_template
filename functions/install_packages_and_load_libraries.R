@@ -1,0 +1,48 @@
+install_packages_and_load_libraries <- function(cran_packages = NULL, github_packages = NULL) {
+  # Function to install a package if not already installed
+  ensure_package_installed <- function(pkg) {
+    if (!requireNamespace(pkg, quietly = TRUE)) {
+      install.packages(pkg)
+    }
+  }
+  
+  # Ensure `{pacman}` and `{renv}` are installed
+  ensure_package_installed("pacman")
+  ensure_package_installed("renv")
+  
+  # Load `{pacman}` and `{renv}` if not already loaded
+  if (!"pacman" %in% loadedNamespaces()) library(pacman)
+  if (!"renv" %in% loadedNamespaces()) library(renv)
+  
+  # Install and load CRAN packages if specified
+  if (!is.null(cran_packages)) {
+    pacman::p_load(char = cran_packages, character.only = TRUE)
+  }
+  
+  # Install and load GitHub packages if specified
+  if (!is.null(github_packages)) {
+    pacman::p_install_gh(github_packages, character.only = TRUE)
+  }
+  
+  # Snapshot the `{renv}` environment
+  suppressMessages(invisible(capture.output(renv::snapshot())))
+}
+
+# Example usages. Add or remove packages as needed.
+cran_packages <- c(
+  # File management
+  "fs", "here", "utils", "tools",
+  # Data tidying
+  "tidyverse", "janitor", "scales",
+  # Data visualization
+  "plotly", "DT", "gt", "patchwork", "wesanderson", "ggtext", "ggiraph", 
+  "rmarkdown", "leaflet", "leaflet.esri", "shiny", "gridExtra",
+  # Spatial analysis
+  "terra", "sf")
+
+# github_packages <- c()
+
+install_packages_and_load_libraries(
+  cran_packages = cran_packages
+  # github_packages = github_packages
+)

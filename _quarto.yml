@@ -1,0 +1,36 @@
+project:
+  type: website
+  output-dir: docs
+  preview: 
+    port: 1200
+    browser: true
+
+website:
+  title: "[Insert title of website]"
+  back-to-top-navigation: true
+  search: true
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: add_page.qmd
+        text: Additional Page
+  page-footer: |
+    ![](/assets/logos/uhm-logo.png){width=30%}
+    <br><br>
+        
+format:
+  html:
+    theme: litera
+    toc-location: left
+    toc: true
+    page-layout: full
+    link-external-newwindow: true
+    code-overflow: wrap
+    code-annotations: hover
+    # margin-header: |
+    #   ![](/assets/logos/uhm-logo.png) 
+
+execute:
+  message: false
+  warning: false
