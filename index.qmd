@@ -25,7 +25,7 @@ source(here::here("functions", "install_packages_and_load_libraries.R")) # <1>
 
 ## Data
 
-We will use the `mtcars` data set as an example:
+We will use the `mtcars` dataset as an example:
 
 ```{r}
 #| label: glimpse-at-mtcars
