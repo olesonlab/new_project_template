@@ -3,26 +3,33 @@ title: "Project Template Overview"
 format: gfm
 ---
 
-This project template is designed to streamline the setup of new projects within the research lab, ensuring consistency and efficiency. It provides a standardized structure for organizing data, assets, functions, and outputs, making it easier to manage and navigate complex projects.
+# Project Template Overview
+
+This project template is designed to streamline the setup of new projects within the research lab, ensuring consistency and efficiency.
+It provides a standardized structure for organizing data, assets, functions, and outputs, making it easier to manage and navigate complex projects.
 
 ## Table of Contents
 
-1. [Project Structure](#project-structure)
-2. [Folder Descriptions](#folder-descriptions)
-   - [assets](#assets)
-   - [data](#data)
-   - [docs](#docs)
-   - [final_outputs](#final_outputs)
-   - [functions](#functions)
-3. [Key Files](#key-files)
-   - [Quarto Configuration](#quarto-configuration)
-   - [R Project Configuration](#r-project-configuration)
-4. [Getting Started](#getting-started)
-5. [Usage Guidelines](#usage-guidelines)
+1.  [Project Structure](#project-structure)
+2.  [Folder Descriptions](#folder-descriptions)
+    -   [assets](#assets)
+    -   [data](#data)
+    -   [docs](#docs)
+    -   [final_outputs](#final_outputs)
+    -   [functions](#functions)
+3.  [Key Files](#key-files)
+    -   [Quarto Configuration](#quarto-configuration)
+    -   [R Project Configuration](#r-project-configuration)
+    -   [index.qmd](#indexqmd)
+    -   [add_page.qmd](#add_pageqmd)
+    -   [renv.lock](#renvlock)
+4.  [Getting Started](#getting-started)
+5.  [Usage Guidelines](#usage-guidelines)
+6.  [Previewing and Rendering Quarto Projects and Documents](#previewing-and-rendering-quarto-projects-and-documents)
 
-## Project Structure
+## Project Structure {#project-structure}
 
-```{.python}
+``` bash
 #| eval: false
 /new_project_template
 │
@@ -48,68 +55,172 @@ This project template is designed to streamline the setup of new projects within
 ├── functions/
 │   └── install_packages_and_load_libraries.R
 │
+├── renv/
 ├── .quarto.yml
 ├── .gitignore
-├── .Rprofile
+├── add_page.qmd
+├── index.qmd
 ├── new_project_template.Rproj
-└── README.md
+├── README.md
+├── README.qmd
+└── renv.lock
 ```
 
-## Folder Descriptions
+## Folder Descriptions {#folder-descriptions}
 
-### `assets/`
+### `assets/` {#assets}
 
-- **Description**: Contains assets used across the project, such as images, logos, and styles.
-- **Subfolders**:
-  - **images/**: Photos and images for use in websites, presentations, and reports.
-  - **logos/**: Logos for branding and partner representation.
-  - **styles.scss**: SCSS file for consistent styling across documents and websites.
+-   **Description**: Contains assets used across the project, such as images, logos, and styles.
+-   **Subfolders**:
+    -   **images/**: Photos and images for use in websites, presentations, and reports.
+    -   **logos/**: Logos for branding and partner representation.
+    -   **styles.scss**: SCSS file for consistent styling across documents and websites.
 
-### `data/`
+### `data/` {#data}
 
-- **Description**: Holds all data files related to the project.
-- **Subfolders**:
-  - **raw/**: Unprocessed, original data files.
-  - **tidied/**: Cleaned and processed data, ready for analysis.
+-   **Description**: Holds all data files related to the project.
+-   **Subfolders**:
+    -   **raw/**: Unprocessed, original data files.
+    -   **tidied/**: Cleaned and processed data, ready for analysis.
+    -   **spatial/**: Spatial data files, such as rasters and shapefiles, used for geographic analysis.
 
-### `docs/`
+### `docs/` {#docs}
 
-- **Description**: Output directory for Quarto-generated websites and documents.
-- **Contents**:
-  - **_freeze/**: Caching folder for frozen content, speeding up future builds.
-  - **_site/**: Contains the final rendered website content.
+-   **Description**: Output directory for Quarto-generated websites and documents.
+-   **Contents**:
+    -   \*\*\_freeze/\*\*: Caching folder for frozen content, speeding up future builds.
+    -   \*\*\_site/\*\*: Contains the final rendered website content.
 
-### `final_outputs/`
+### `final_outputs/` {#final_outputs}
 
-- **Description**: Stores the final processed data and visualizations for reporting and publication.
-- **Subfolders**:
-  - **data/**: Final versions of processed data files.
-  - **visualizations/**: Final visualizations, including graphs, charts, and maps.
+-   **Description**: Stores the final processed data and visualizations for reporting and publication.
+-   **Subfolders**:
+    -   **data/**: Final versions of processed data files.
+    -   **visualizations/**: Final visualizations, including graphs, charts, and maps.
 
-### `functions/`
+### `functions/` {#functions}
 
-- **Description**: Contains R scripts with functions to automate tasks and manage dependencies.
-- **Key Script**: `install_packages_and_load_libraries.R` to install and load necessary R packages for the project.
+-   **Description**: Contains R scripts with functions to automate tasks and manage dependencies.
+-   **Key Script**: `install_packages_and_load_libraries.R` to install and load necessary R packages for the project.
 
-## Key Files
+### `renv/`
 
-### Quarto Configuration
+-   **Description**: Directory used by the `{renv}` package to manage the project's R environment. It contains all the package versions and configurations required to reproduce the project's setup.
+-   **Usage**: Automatically created and managed by `{renv}` to ensure that the same package versions are used across different environments and by different users.
 
-- **`.quarto.yml`**: Configuration file for Quarto, specifying settings for document and website rendering, including the output directory (`docs/`).
+## Key Files {#key-files}
 
-### R Project Configuration
+### Quarto Configuration {#quarto-configuration}
 
-- **`new_project_template.Rproj`**: R project file for easy project setup in RStudio.
+-   **`.quarto.yml`**: Configuration file for Quarto, specifying settings for document and website rendering, including the output directory (`docs/`).
 
-## Getting Started
+### R Project Configuration {#r-project-configuration}
 
-1. **Clone the Template**: Start by cloning this template repository to set up a new project.
-2. **Install Dependencies**: Use the `install_packages_and_load_libraries.R` script to install necessary R packages.
-3. **Customize**: Update the `.quarto.yml` and other configuration files as needed for your specific project.
+-   **`new_project_template.Rproj`**: R project file for easy project setup in RStudio.
 
-## Usage Guidelines
+### `index.qmd`
 
-- **Data Management**: Store raw data in `data/raw/` and processed data in `data/tidied/`. Use the `final_outputs/data/` folder for final datasets ready for publication.
-- **Assets**: Use the `assets/` folder for all images, logos, and styles to maintain a consistent look and feel across project outputs.
-- **Functions**: Use the `functions/` folder to keep reusable R scripts that automate tasks and manage dependencies.
-- **Documentation**: Maintain documentation in `README.md` files within each folder to describe the contents and usage guidelines.
+-   **Description**: The main Quarto document that serves as the homepage for the project website. This file is used to create the primary content and structure of the site.
+-   **Usage**: Edit this file to update the main content of your project's website. Use Quarto's markdown syntax to add sections, images, and other elements.
+
+### `add_page.qmd`
+
+-   **Description**: An additional Quarto document that serves as a template for creating new pages on the project website.
+-   **Usage**: Duplicate and edit this file to add more pages to the website. Customize the content as needed to fit the purpose of each additional page.
+
+### `renv.lock`
+
+-   **Description**: Lockfile used by `{renv}` to record the state of the project's R package environment, including exact package versions.
+-   **Usage**: Share this file with collaborators to ensure that they can recreate the exact same R environment by using `renv::restore()`, providing consistent results across different systems.
+
+## Getting Started {#getting-started}
+
+1.  **Clone the Template**: Start by cloning this template repository to set up a new project.
+2.  **Install Dependencies**: Use the `install_packages_and_load_libraries.R` script to install necessary R packages.
+3.  **Customize**: Update the `.quarto.yml`, `index.qmd`, `add_page.qmd`, and other configuration files as needed for your specific project.
+
+## Usage Guidelines {#usage-guidelines}
+
+-   **Data Management**: Store raw data in `data/raw/` and processed data in `data/tidied/`. Use the `final_outputs/data/` folder for final datasets ready for publication.
+-   **Assets**: Use the `assets/` folder for all images, logos, and styles to maintain a consistent look and feel across project outputs.
+-   **Functions**: Use the `functions/` folder to keep reusable R scripts that automate tasks and manage dependencies.
+-   **Documentation**: Maintain documentation in `README.md` files within each folder to describe the contents and usage guidelines.
+
+## Previewing and Rendering Quarto Projects and Documents {#previewing-and-rendering-quarto-projects-and-documents}
+
+This project template supports various types of Quarto outputs, including websites, reports, and presentations.
+You can easily preview and render any document or the entire project using the commands below.
+
+### How to Preview a Quarto Project or Document
+
+1.  **Preview the Entire Project**:
+    -   To preview the entire Quarto project (e.g., a website), you can run the following command from the terminal in your project directory:
+
+        ``` bash
+        quarto preview
+        ```
+
+    -   This command will start a local server and open your default web browser to show a live preview of the website.
+        Any changes made to the Quarto files will automatically update in the preview.
+2.  **Preview a Specific Document**:
+    -   To preview a specific Quarto document (e.g., `index.qmd` or `add_page.qmd`), specify the file directly:
+
+        ``` bash
+        quarto preview index.qmd
+        ```
+
+    -   This command will render the specified document and open a preview in your default web browser.
+
+### How to Render a Quarto Project or Document
+
+1.  **Render the Entire Project**:
+    -   To render the entire project (e.g., generate the complete website or report), use the following command:
+
+        ``` bash
+        quarto render
+        ```
+
+    -   This command will generate the output based on the settings in your `_quarto.yml` file, placing the results in the specified output directory (e.g., `docs/` for websites).
+2.  **Render a Specific Document**:
+    -   To render a specific Quarto document, specify the file directly:
+
+        ``` bash
+        quarto render index.qmd
+        ```
+
+    -   The rendered output will be generated according to the settings specified in the document and `_quarto.yml` file.
+
+### Customizing Output Types
+
+-   The project can be configured to output different types of documents such as HTML, PDF, or MS Word by modifying the `_quarto.yml` file and specifying the desired format.
+    For example:
+
+    ``` yaml
+    project:
+      type: website
+
+    format:
+      html: default
+      pdf:
+        documentclass: article
+    ```
+
+-   You can also specify output formats for individual documents by adding a format option in the YAML header of each `.qmd` file.
+    For example:
+
+    ``` yaml
+    title: "My Report"
+    format: pdf 
+    ```
+
+### Additional Tips
+
+-   **Update and Install Packages**: Make sure to specify and install all required packages for a given project by using and customizing the provided `install_packages_and_load_libraries.R` script.
+    Run this script before rendering documents to ensure all dependencies are satisfied.
+
+-   **Sync with `renv`**: Use `renv::restore()` to sync your environment with the `renv.lock` file to match the project's package requirements.
+
+-   **Live Preview**: Use `quarto preview` for a live updating preview.
+    This is especially useful when making frequent changes to the content.
+
+By following these instructions, you can easily preview and render your Quarto project or individual documents, enabling you to produce a wide range of outputs tailored to your research needs.
