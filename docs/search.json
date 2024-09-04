@@ -7,41 +7,6 @@
     "text": "This is a Quarto website. The following is an example of how you can format it."
   },
   {
-    "objectID": "index.html#section-1",
-    "href": "index.html#section-1",
-    "title": "[Insert title]",
-    "section": "Section 1",
-    "text": "Section 1\n\n\nExample of a folded code chunk\n1source(here::here(\"functions\", \"install_packages_and_load_libraries.R\"))\n\n\n\n1\n\nSources in function install_packages_and_load_libraries() which uses the pacman and renv packages to keep track of our dependencies\n\n\n\n\nExample of a code chunk:\n\nglimpse(mtcars)\n\nRows: 32\nColumns: 11\n$ mpg  &lt;dbl&gt; 21.0, 21.0, 22.8, 21.4, 18.7, 18.1, 14.3, 24.4, 22.8, 19.2, 17.8,…\n$ cyl  &lt;dbl&gt; 6, 6, 4, 6, 8, 6, 8, 4, 4, 6, 6, 8, 8, 8, 8, 8, 8, 4, 4, 4, 4, 8,…\n$ disp &lt;dbl&gt; 160.0, 160.0, 108.0, 258.0, 360.0, 225.0, 360.0, 146.7, 140.8, 16…\n$ hp   &lt;dbl&gt; 110, 110, 93, 110, 175, 105, 245, 62, 95, 123, 123, 180, 180, 180…\n$ drat &lt;dbl&gt; 3.90, 3.90, 3.85, 3.08, 3.15, 2.76, 3.21, 3.69, 3.92, 3.92, 3.92,…\n$ wt   &lt;dbl&gt; 2.620, 2.875, 2.320, 3.215, 3.440, 3.460, 3.570, 3.190, 3.150, 3.…\n$ qsec &lt;dbl&gt; 16.46, 17.02, 18.61, 19.44, 17.02, 20.22, 15.84, 20.00, 22.90, 18…\n$ vs   &lt;dbl&gt; 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0,…\n$ am   &lt;dbl&gt; 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0,…\n$ gear &lt;dbl&gt; 4, 4, 4, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 4, 4, 4, 3, 3,…\n$ carb &lt;dbl&gt; 4, 4, 1, 1, 2, 1, 4, 2, 2, 4, 4, 3, 3, 3, 4, 4, 4, 1, 2, 1, 1, 2,…\n\n\n\nTablePlot\n\n\n\n\nCreate a quick table\n1gt(head(mtcars))\n\n\n\n1\n\nPrint the first 6 rows of the mtcars data set using head() function and create a table using the {gt} R package\n\n\n\n\n\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\ndrat\nwt\nqsec\nvs\nam\ngear\ncarb\n\n\n\n\n21.0\n6\n160\n110\n3.90\n2.620\n16.46\n0\n1\n4\n4\n\n\n21.0\n6\n160\n110\n3.90\n2.875\n17.02\n0\n1\n4\n4\n\n\n22.8\n4\n108\n93\n3.85\n2.320\n18.61\n1\n1\n4\n1\n\n\n21.4\n6\n258\n110\n3.08\n3.215\n19.44\n1\n0\n3\n1\n\n\n18.7\n8\n360\n175\n3.15\n3.440\n17.02\n0\n0\n3\n2\n\n\n18.1\n6\n225\n105\n2.76\n3.460\n20.22\n1\n0\n3\n1"
-  },
-  {
-    "objectID": "index.html#section-2",
-    "href": "index.html#section-2",
-    "title": "[Insert title]",
-    "section": "Section 2",
-    "text": "Section 2\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-  },
-  {
-    "objectID": "index.html#section-3",
-    "href": "index.html#section-3",
-    "title": "[Insert title]",
-    "section": "Section 3",
-    "text": "Section 3\n\nSubsection 1\nLorem ipsum odor amet, consectetuer adipiscing elit. Varius mus vitae euismod vehicula montes natoque turpis. Venenatis nisi primis orci felis cursus sem himenaeos metus hendrerit. Suspendisse himenaeos congue metus a aptent pharetra ligula praesent. In per eget diam tristique sodales adipiscing. Est at nisl faucibus pulvinar per nunc at malesuada! Platea magna suspendisse egestas lacinia faucibus taciti donec id.\n\n\nSubsection 2\nSapien platea vel, faucibus vel rhoncus ligula platea. Ut curae enim ridiculus sapien finibus? Amet ac taciti faucibus congue quisque orci pharetra. Ad nullam tortor dis consectetur interdum penatibus. Tempor justo taciti fames dapibus sodales fusce in class proin. Class inceptos nec enim libero aliquam lobortis tempor erat platea."
-  },
-  {
-    "objectID": "add_page.html",
-    "href": "add_page.html",
-    "title": "[Insert title]",
-    "section": "",
-    "text": "Back to top"
-  },
-  {
-    "objectID": "index.html#resources",
-    "href": "index.html#resources",
-    "title": "[Insert title]",
-    "section": "Resources",
-    "text": "Resources\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
-  },
-  {
     "objectID": "index.html#dependencies",
     "href": "index.html#dependencies",
     "title": "[Insert title]",
@@ -68,5 +33,19 @@
     "title": "[Insert title]",
     "section": "Additional Section",
     "text": "Additional Section\n\nSubsection\nLorem ipsum odor amet, consectetuer adipiscing elit. Varius mus vitae euismod vehicula montes natoque turpis. Venenatis nisi primis orci felis cursus sem himenaeos metus hendrerit. Suspendisse himenaeos congue metus a aptent pharetra ligula praesent. In per eget diam tristique sodales adipiscing. Est at nisl faucibus pulvinar per nunc at malesuada! Platea magna suspendisse egestas lacinia faucibus taciti donec id.\n\n\nAdditional Subsection\nSapien platea vel, faucibus vel rhoncus ligula platea. Ut curae enim ridiculus sapien finibus? Amet ac taciti faucibus congue quisque orci pharetra. Ad nullam tortor dis consectetur interdum penatibus. Tempor justo taciti fames dapibus sodales fusce in class proin. Class inceptos nec enim libero aliquam lobortis tempor erat platea."
+  },
+  {
+    "objectID": "index.html#resources",
+    "href": "index.html#resources",
+    "title": "[Insert title]",
+    "section": "Resources",
+    "text": "Resources\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "add_page.html",
+    "href": "add_page.html",
+    "title": "[Insert title]",
+    "section": "",
+    "text": "Back to top"
   }
 ]
