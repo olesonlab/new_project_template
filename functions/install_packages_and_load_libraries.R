@@ -6,25 +6,25 @@ install_packages_and_load_libraries <- function(cran_packages = NULL, github_pac
     }
   }
   
-  # Ensure `{pacman}` and `{renv}` are installed
+  # Ensure pacman and renv are installed
   ensure_package_installed("pacman")
   ensure_package_installed("renv")
-  
-  # Load `{pacman}` and `{renv}` if not already loaded
-  if (!"pacman" %in% loadedNamespaces()) library(pacman)
-  if (!"renv" %in% loadedNamespaces()) library(renv)
+  # 
+  # Load pacman and renv
+  library(pacman)
+  library(renv)
   
   # Install and load CRAN packages if specified
-  if (!is.null(cran_packages)) {
-    pacman::p_load(char = cran_packages, character.only = TRUE)
+  if (!is.null(cran_packages) && length(cran_packages) > 0) {
+    pacman::p_load(char = cran_packages)
   }
   
   # Install and load GitHub packages if specified
-  if (!is.null(github_packages)) {
-    pacman::p_install_gh(github_packages, character.only = TRUE)
+  if (!is.null(github_packages) && length(github_packages) > 0) {
+    pacman::p_install_gh(github_packages)
   }
   
-  # Snapshot the `{renv}` environment
+  # Snapshot the renv environment
   suppressMessages(invisible(capture.output(renv::snapshot())))
 }
 
