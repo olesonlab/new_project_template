@@ -1,8 +1,6 @@
 # Project Template Overview
 
 
-# Project Template Overview
-
 This project template is designed to streamline the setup of new
 projects within the research lab, ensuring consistency and efficiency.
 It provides a standardized structure for organizing data, assets,
