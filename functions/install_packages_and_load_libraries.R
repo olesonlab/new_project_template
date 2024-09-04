@@ -23,9 +23,6 @@ install_packages_and_load_libraries <- function(cran_packages = NULL, github_pac
   if (!is.null(github_packages) && length(github_packages) > 0) {
     pacman::p_install_gh(github_packages)
   }
-  
-  # Snapshot the renv environment
-  suppressMessages(invisible(capture.output(renv::snapshot())))
 }
 
 # Example usages. Add or remove packages as needed. Then source file in quarto
@@ -47,3 +44,6 @@ install_packages_and_load_libraries(
   cran_packages = cran_packages
   # github_packages = github_packages
 )
+
+# Snapshot the renv environment
+suppressMessages(invisible(capture.output(renv::snapshot())))
