@@ -46,4 +46,4 @@ install_packages_and_load_libraries(
 )
 
 # Snapshot the renv environment
-suppressMessages(invisible(capture.output(renv::snapshot())))
+suppressMessages(invisible(capture.output(renv::snapshot()))) 
