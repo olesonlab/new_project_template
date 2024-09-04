@@ -28,7 +28,8 @@ install_packages_and_load_libraries <- function(cran_packages = NULL, github_pac
   suppressMessages(invisible(capture.output(renv::snapshot())))
 }
 
-# Example usages. Add or remove packages as needed.
+# Example usages. Add or remove packages as needed. Then source file in quarto
+# docs so that dependencies are managed within one area.
 cran_packages <- c(
   # File management
   "fs", "here", "utils", "tools",
@@ -38,7 +39,7 @@ cran_packages <- c(
   "plotly", "DT", "gt", "patchwork", "wesanderson", "ggtext", "ggiraph", 
   "rmarkdown", "leaflet", "leaflet.esri", "shiny", "gridExtra",
   # Spatial analysis
-  "terra", "sf")
+  "terra", "sf", "units")
 
 # github_packages <- c()
 
